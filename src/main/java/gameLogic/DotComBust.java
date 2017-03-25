@@ -8,7 +8,6 @@ import java.util.List;
 public class DotComBust {
     private GameHelper helper = new GameHelper();
     private List<DotCom> dotList = new ArrayList<DotCom>();
-    private int numOfGuesses = 0;
 
     public static void main(String[] args) {
         DotComBust game = new DotComBust();
@@ -19,8 +18,10 @@ public class DotComBust {
     private void setUpGame() {
         DotCom one = new DotCom();
         one.setName( "yandex.ru" );
+
         DotCom two = new DotCom();
         one.setName( "google.com" );
+
         DotCom three = new DotCom();
         one.setName( "vk.com" );
 
@@ -43,7 +44,6 @@ public class DotComBust {
     }
 
     private void checkUserGuess(String userGuess) {
-        numOfGuesses++;
         String result = "Мимо";
 
         for (DotCom dot : dotList) {
