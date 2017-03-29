@@ -29,10 +29,22 @@ public class DotComTest {
     public void test_checkYourself_success() throws Exception {
         String userGuess = "45";
 
-        String result = testDot.checkYourself( userGuess );
+        String result = testDot.checkYourself(userGuess);
 
         Assert.assertEquals("Попал", result);
+
+
+        userGuess = "55";
+
+        result = testDot.checkYourself(userGuess);
+
+        Assert.assertEquals("Мимо", result);
+
+        result = testDot.checkYourself("3");
+        result = testDot.checkYourself("45");
+        result = testDot.checkYourself("67");
+        result = testDot.checkYourself("15");
+
+        Assert.assertEquals("Потопил", result);
     }
-
-
 }
